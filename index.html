@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>techBuddy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./logo.jpg">
+  <script src="https://kit.fontawesome.com/7a4b62b0a4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav class="container">
+      <a href="#home"><img class="logo-pic" src="logo.jpg" alt="logo"></a>
+
+      <div class="logo">
+        <a href="#home">techBuddy</a>
+      </div>
+      <ul class="nav-list">
+        <a href="#home">
+          <li>Home</li>
+        </a>
+
+        <div class="dropdown">
+          <li>Gadgets</li>
+          <div class="dropdown-content">
+            <a href="#laptops">Laptops</a>
+            <a href="#phones">SmartPhones</a>
+            <a href="#accessories">Accessories</a>
+          </div>
+        </div>
+        <a href="#review">
+          <li>Reviews</li>
+        </a>
+
+        <div class="dropdown">
+          <a id="uname">
+            <li id="logintext"></li>
+          </a>
+          <div class="dropdown-content" id="account">
+            <!-- <a href="saved_items.html">Saved items</a> -->
+            <form method="post" action="fetch_items.php">
+              <input type="hidden" name="action" value="fetch">
+              <button type="submit" class="saved-items-btn">Saved Items</button>
+            </form>
+
+            <a href="#" onclick="logout()">Log Out</a>
+          </div>
+
+        </div>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="home-section" id="home">
+      <div class="container">
+        <h1>techBuddy</h1>
+        <h3>Welcome to our gadget recommendation website!</h3>
+        <p>
+          Here, you can find the latest and most popular laptops, smartphones, gaming mouse, keyboards, and accessories.
+          Whether you are a student, a professional, or a gamer,<br> we have a wide range of options to suit your needs
+          and budget. With our easy-to-use website and user-friendly interface,<br> you can quickly find the best
+          gadgets that meet your requirements. So, browse our website today and discover the perfect device for you!
+        </p>
+      </div>
+    </section>
+
+    <section class="laptop-section" id="laptops">
+      <div class="container">
+        <h2>
+          <span><i class="fa fa-laptop"></i></span> Laptops
+        </h2>
+        <h4>
+          Looking for a portable computing device that you can take with you on-the-go? Check out our laptop section,
+          where we've compiled a list of top-performing laptops <br>that are perfect for work, play, and everything in
+          between. From lightweight ultrabooks to powerful gaming laptops, we've got you covered with reviews, specs,
+          and prices <br>to help you make an informed decision. Whether you're a student, professional, or casual user,
+          you'll find the perfect laptop to suit your needs and budget in our laptop section.
+        </h4>
+        <button class="primary-btn" onclick="redirectToLaptop()">Discover Laptops</button>
+        <div class="laptop-img">
+          <img src="laptop.png" alt="laptop-img" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about-laptop container">
+      <h3>Laptop collection you always wished for. Granted.</h3>
+      <p>
+      <ul>
+        <li>Our laptop section includes laptops from all major brands, such as Apple, Dell, HP, Lenovo, Acer, Asus, and
+          more. You can compare and contrast the features and specifications <br>of each laptop to find the perfect fit
+          for your needs.</li>
+
+        <li>We offer a variety of laptop types, including traditional clamshell laptops, 2-in-1 convertible laptops,
+          gaming laptops,and even Chromebooks. No matter what your requirements are, we have<br> a laptop that will meet
+          them.</li>
+        <li>Our laptop section provides detailed information on processor types, RAM capacity, storage capacity,
+          graphics cards, battery life, and other important features that are essential <br> to consider when choosing a
+          laptop.
+        </li>
+      </ul>
+      </p>
+      <button class="secondary-btn" onclick="redirectToLaptop()">Show More</button>
+
+      <div class="multiplelaptops-img">
+        <img src="multiple-laptops (1).jpg" alt="multiple-laptops" />
+      </div>
+    </section>
+
+    <section class="phone-section" id="phones">
+      <div class="container">
+        <h3>Top Picks for Your Pocket: Best Mobile Phones of the Year.</h3>
+        <p>
+          Looking for the perfect mobile phone to keep you connected and entertained on the go? Look no further! Our
+          team of experts has curated a list of the <br> best mobile phones of the year. From sleek and stylish designs
+          to advanced features and high-performance specs, our top picks will help you make the most of your mobile
+          experience. <br> Whether you're a social media addict, a gaming enthusiast, or a productivity powerhouse,
+          we've got you covered with our recommendations <br>for the best mobile phones on the market. So why wait?
+          Check out our list and upgrade your pocket today!
+        </p>
+        <br> <br>
+        <p>
+          Our list includes mobile phones across a range of price points, so you're sure to find an option that fits
+          your budget.
+        </p>
+        <p>
+          We've taken into account factors like battery life, camera quality, and processing power to ensure that each
+          phone on our list offers a well-rounded user experience.
+        </p>
+        <p>
+          Our team has thoroughly tested each phone to provide honest and unbiased reviews, so you can make an informed
+          decision when choosing your next device.
+        </p>
+        <p>
+          We regularly update our list to include the latest models and trends, so you can stay up-to-date on the newest
+          and most innovative mobile phone releases.
+        </p>
+      </div>
+      <button class="phone-btn" onclick="redirectToPhone()">Show More</button>
+    </section>
+    <div class="container">
+      <section class="accessories-section" id="accessories">
+        <div class="accessories">
+          <img src="acc.jpg" style=margin:15px>
+        </div>
+        <div class="accessories-content">
+          <h3>Accessories</h3>
+          <p>
+            Welcome to our accessories section, where you can find the latest and greatest gaming accessories to enhance
+            your gaming experience. <br>We offer a wide selection of accessories, including gaming mice, keyboards,
+            headsets, and more, from top brands like Razer, Logitech,<br> Corsair, and SteelSeries. Our accessories are
+            designed with gamers in mind, featuring high-quality materials, customizable features, and ergonomic designs
+            that provide comfort and precision during gameplay. Whether you're a casual gamer or a competitive esports
+            player, our accessories will give you the edge you need to take your gaming to the next level. Browse our
+            selection today and see how our gaming accessories can elevate your gaming experience.
+          </p>
+          <hr />
+          <div>
+            <button class="secondary-btn" onclick="redirectToAccessories()">Explore</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="review">
+      <!--heading--->
+      <div class="testimonial-heading">
+        <span>Comments</span>
+        <h4>Clients Says</h4>
+      </div>
+      <!--testimonials-box-container------>
+      <div class="testimonial-box-container">
+        <!--BOX-1-------------->
+        <div class="testimonial-box">
+          <!--top------------------------->
+          <div class="box-top">
+            <!--profile----->
+            <div class="profile">
+              <!--img---->
+              <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+              </div>
+              <!--name-and-username-->
+              <div class="name-user">
+                <strong>Rahul Kumar</strong>
+                <span>@kumarahul</span>
+              </div>
+            </div>
+            <!--reviews------>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i><!--Empty star-->
+            </div>
+          </div>
+          <!--Comments---------------------------------------->
+          <div class="client-comment">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident
+              temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates
+              incidunt blanditiis sed atque cumque.</p>
+          </div>
+        </div>
+        <!--BOX-2-------------->
+        <div class="testimonial-box">
+          <!--top------------------------->
+          <div class="box-top">
+            <!--profile----->
+            <div class="profile">
+              <!--img---->
+              <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+              </div>
+              <!--name-and-username-->
+              <div class="name-user">
+                <strong>Aditya</strong>
+                <span>@vaditya</span>
+              </div>
+            </div>
+            <!--reviews------>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i><!--Empty star-->
+            </div>
+          </div>
+          <!--Comments---------------------------------------->
+          <div class="client-comment">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident
+              temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates
+              incidunt blanditiis sed atque cumque.</p>
+          </div>
+        </div>
+        <!--BOX-3-------------->
+        <div class="testimonial-box">
+          <!--top------------------------->
+          <div class="box-top">
+            <!--profile----->
+            <div class="profile">
+              <!--img---->
+              <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+              </div>
+              <!--name-and-username-->
+              <div class="name-user">
+                <strong>Ashish</strong>
+                <span>@ashishkumar</span>
+              </div>
+            </div>
+            <!--reviews------>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i><!--Empty star-->
+            </div>
+          </div>
+          <!--Comments---------------------------------------->
+          <div class="client-comment">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident
+              temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates
+              incidunt blanditiis sed atque cumque.</p>
+          </div>
+        </div>
+        <!--BOX-4-------------->
+        <div class="testimonial-box">
+          <!--top------------------------->
+          <div class="box-top">
+            <!--profile----->
+            <div class="profile">
+              <!--img---->
+              <div class="profile-img">
+                <img src="https://cdn3.iconfinder.com/data/icons/avatars-15/64/_Ninja-2-512.png" />
+              </div>
+              <!--name-and-username-->
+              <div class="name-user">
+                <strong>Bishnoi</strong>
+                <span>@abaditya</span>
+              </div>
+            </div>
+            <!--reviews------>
+            <div class="reviews">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i><!--Empty star-->
+            </div>
+          </div>
+          <!--Comments---------------------------------------->
+          <div class="client-comment">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat quis? Provident
+              temporibus architecto asperiores nobis maiores nisi a. Quae doloribus ipsum aliquam tenetur voluptates
+              incidunt blanditiis sed atque cumque.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <section class="footer-upper">
+      <div class="container">
+        <div class="footer-links">
+          <h4>Shop and Learn</h4>
+          <ul>
+            <li>Laptops</li>
+            <li>Phones</li>
+            <li>Tablest</li>
+            <li>Keyboards</li>
+            <li>Gift Cards</li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>techBuddy Store</h4>
+          <ul>
+            <li>Find a Store</li>
+            <li>Tody at techBuddy</li>
+            <li>techBuddy Camp</li>
+            <li>Financing</li>
+            <li>Order Status</li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Education & Business</h4>
+          <ul>
+            <li>techBuddy & Education</li>
+            <li>Shop for Collage</li>
+            <li>techBuddy & Business</li>
+            <li>Shop for Business</li>
+            <li>Jobs</li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>About techBuddy</h4>
+          <ul>
+            <li>Newsroom</li>
+            <li>techBuddy Leadership</li>
+            <li>Investors</li>
+            <li>Envents</li>
+            <li>Contact techBuddy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="footer-lower">
+      <p>Copyright © 2023 Md Ashhar</p>
+    </section>
+  </footer>
+
+  <!-- redirecting to other pages -->
+  <script>
+    if (document.cookie.indexOf('Name') == -1) {
+      console.log("HI");
+      document.getElementById('account').style.visibility = "hidden";
+      document.getElementById('logintext').innerHTML = "Login";
+      document.getElementById('uname').href = "login.html";
+    }
+    else {
+      document.getElementById('account').style.visibility = "visible";
+      document.getElementById('logintext').innerHTML = getCookie('Name');
+      document.getElementById('uname').href = "#";
+    }
+    console.log("cookie", document.cookie);
+    function redirectToPhone() {
+      window.location.href = "phones.html";
+    }
+    function redirectToLaptop() {
+      window.location.href = "laptop.html";
+    }
+    function redirectToAccessories() {
+      window.location.href = "accessories.html";
+    }
+    function getCookie(cookieName) {
+      let cookie = {};
+      document.cookie.split(';').forEach(function (el) {
+        let [key, value] = el.split('=');
+        cookie[key.trim()] = value;
+      })
+      return cookie[cookieName];
+    }
+    
+    console.log("Name", getCookie("Name"));
+
+
+    // JavaScript code to remove cookies from the browser
+
+    // Function to delete a cookie by name
+    function logout() {
+      document.cookie = "Name=" + getCookie('Name') + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.cookie = "Email=" + getCookie('Email') + "; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+      document.getElementById('account').style.visibility = "hidden";
+      document.getElementById('logintext').innerHTML = "Login";
+      document.getElementById('uname').href = "login.html";
+      // document.getElementById('account').hidden=true
+      // const name = document.getElementById('uname')
+      // uname.innerText = ""
+      // const login = document.getElementById('hideLogin')
+      // login.innerText = "Login"
+    }
+
+    // Function to clear all cookies
+    function clearAllCookies() {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf('=');
+        var Name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        logout(Name);
+      }
+    }
+
+    //code to store cookies
+    document.cookie = "e_mail=" + getCookie('Email') + "; expires=Thu, 01 Jan 2025 00:00:00 UTC; path=/";
+
+    //redirecting to saved_items.html
+    document.querySelector('.saved-items-btn').addEventListener('click', function() {
+    window.location.href = 'saved_items.html';
+    });
+
+  </script>
+</body>
+
+</html>

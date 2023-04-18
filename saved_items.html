@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Items</title>
+    <link rel="shortcut icon" href="./logo.jpg">
+    <link rel="stylesheet" href="style_saved_items.css">
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html#home">
+                <img class="logo-pic" src="logo.jpg" alt="logo">
+            </a>
+
+            <div class="logo">
+                <a href="index.html#home">techBuddy</a>
+            </div>
+
+            <ul class="nav-list">
+                <a href="index.html#home">
+                    <li>Home</li>
+                </a>
+                <div class="dropdown">
+                    <li>Gadgets</li>
+                    <div class="dropdown-content">
+                        <a href="laptop.html">Laptops</a>
+                        <a href="phones.html">SmartPhones</a>
+                        <a href="accessories.html">Accessories</a>
+                    </div>
+                </div>
+                <a href="index.html#review">
+                    <li>Reviews</li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <main><table><caption>Saved Items</caption><tr><th>Product Name</th><th>Product Link</th><th>Action</th></tr></table></main>
+
+    <footer>
+        <section class="footer-upper">
+            <div class="container">
+                <div class="footer-links">
+                    <h4>Shop and Learn</h4>
+                    <ul>
+                        <li>Laptops</li>
+                        <li>Phones</li>
+                        <li>Tablest</li>
+                        <li>Keyboards</li>
+                        <li>Gift Cards</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>techBuddy Store</h4>
+                    <ul>
+                        <li>Find a Store</li>
+                        <li>Tody at techBuddy</li>
+                        <li>techBuddy Camp</li>
+                        <li>Financing</li>
+                        <li>Order Status</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Education &amp; Business</h4>
+                    <ul>
+                        <li>techBuddy &amp; Education</li>
+                        <li>Shop for Collage</li>
+                        <li>techBuddy &amp; Business</li>
+                        <li>Shop for Business</li>
+                        <li>Jobs</li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>About techBuddy</h4>
+                    <ul>
+                        <li>Newsroom</li>
+                        <li>techBuddy Leadership</li>
+                        <li>Investors</li>
+                        <li>Envents</li>
+                        <li>Contact techBuddy</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer-lower">
+            <p>Copyright &copy; 2023 Md Ashhar</p>
+        </section>
+    </footer>
+
+    <script>
+        function getCookie(cookieName) {
+            let cookie = {};
+            document.cookie.split(";").forEach(function (el) {
+                let [key, value] = el.split("=");
+                cookie[key.trim()] = value;
+            });
+            return cookie[cookieName];
+        }
+        document.getElementById("getname").value = getCookie("Name");
+
+        //fetching cookies stored in index.html
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i];
+            while (cookie.charAt(0) == " ") {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf("e_mail=") == 0) {
+                var cookieValue = cookie.substring("e_mail=".length, cookie.length);
+            }
+        }
+
+        //deleting items
+        function deleteItem(name, link) {
+            if (confirm("Are you sure you want to delete this item?")) {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        alert("Item deleted successfully!");
+                        location.href='index.html';
+                    }
+                };
+                xhttp.open("POST", "delete_items.php", true);
+                xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+                xhttp.send("name=" + name + "&link=" + link);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

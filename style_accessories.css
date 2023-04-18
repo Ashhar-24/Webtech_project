@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root {
+  --purple500: #082455f8;
+  --purple300: #101f38;
+  --red600: #dc0000;
+  --body: #f9f6ff;
+  --max-width: 1200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin: 50px;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  /* font-size: 16px; */
+  border: none;
+  outline: none;
+  color: aliceblue;
+  /* padding: 14px 16px; */
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--purple300);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: aliceblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: rgb(29, 104, 138);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header {
+  background-color: var(--purple300);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 5px 5px 5px rgb(0, 0, 0.5);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  padding: 20px 0;
+}
+
+nav .nav-list {
+  display: flex;
+  gap: 20px;
+  margin-right: 3rem;
+}
+.logo-pic {
+  margin-left: 15px;
+  padding: 0;
+  height: 80px;
+  width: 80px;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: -50rem;
+}
+
+nav .nav-list li:hover {
+  border-bottom: 2.5px solid white;
+  transition: 0.2s ease-in;
+  /* now the border comes with a delay of 0.2s while hovering over it */
+}
+
+nav .nav-list li {
+  border-bottom: 2.5px solid transparent;
+  transition: 0.2s ease-in;
+}
+
+.footer-upper {
+    background-color: rgb(29, 104, 138);
+    padding: 20px;
+  }
+  
+  .footer-upper .container {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+  }
+  
+  .footer-upper h4 {
+    padding-bottom: 10px;
+    border-bottom: 2px solid white;
+    margin-bottom: 10px;
+  }
+  
+  .footer-lower {
+    background-color: var(--purple300);
+    padding: 20px;
+    display: flex;
+    color: white;
+    justify-content: center;
+  }
+
+
+
+
+
+  /* phones_styling */
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+
+body {
+  background-color: rgb(209, 209, 220);
+}
+h3 {
+  font-size: 1.3em;
+  margin:0;
+}
+p{
+  font-size:0.9em;
+}
+
+/* Hover Card 
+.......................................................................*/
+div.catCard {
+  border: solid 5px #e9e9e9;
+  background: #d8d8d8;
+  width: 221px;
+  height: 400px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 18px;
+}
+div.lowerCatCard {
+  position: absolute; 
+  background: #e9e9e9;
+  padding: 5px 5px; 
+  height: 200px;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+  transition:         all 0.6s ease;
+}
+div.lowerCatCard:hover {
+  opacity: 0.95;
+  bottom: 0;
+  height: 390px;
+}
+div.catCard  div.lowerCatCard { 
+  left: 0; 
+  bottom: -3%;
+  width: 215px;
+}
+div.catCard:hover div.lowerCatCard { 
+  bottom: 0;
+}
+li.catCardList {
+  width:225px;
+  display: inline-block;
+  margin-right: 19px;
+  margin-top: 25px;
+}
+li.catCardList-last {
+  margin-right: 0;
+  width:225px;
+  display: inline-block;
+}
+ul.catCardList {
+  margin: 0;
+}
+#catCardButton {
+  position: absolute;
+  width: 190px;
+  bottom: 5px;
+  -webkit-transition: all 0.6s ease;
+  -moz-transition:    all 0.6s ease;
+  -o-transition:      all 0.6s ease;
+}
+div.lowerCatCard:hover #catCardButton {
+  bottom: 5px;
+}
+.startingPrice span {
+  font-size: 16px;
+  color: #c90c12;
+  font-weight: 300;
+}
+div.startingPrice {
+  margin-bottom: 5px;
+  color: #000;
+  font-weight: 300;
+}
+.catCard img {
+  border: 1px solid #dddddd;
+  width: 219px;
+  height: 198px;
+}
+.catCard img:hover {
+  border: 1px solid #bababa;
+}
+
+/* Button 
+.......................................................................*/
+.button {
+  cursor: pointer;
+  font-size: 14px !important;
+  color: #ffffff;
+  padding: 7px 10px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+  background: #000;
+  border: none;
+  border-bottom: solid 1px #c90c12;
+  text-align: center;
+  margin-top: 10px;
+}
+.button:hover {
+  background-color: #c90c12;
+  border: none;
+  border-bottom: solid 1px #000;
+  box-shadow: 0 2px 3px #a8a8a8;
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+}
+.button:active {
+  background: #000;
+}
+.button a {
+  color: #ffffff;
+  padding: 7px 30px !important;
+  text-decoration: none;
+}
+.button a:hover {
+  color: #ffffff;
+}
+.button:hover {
+	color: #fff;
+}
+
+.list-btn{
+  cursor: pointer;
+  font-size: 14px !important;
+  color: #ffffff;
+  padding: 7px 10px !important;
+  text-decoration: none !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0 !important;
+  background: #000;
+  border: none;
+  border-bottom: solid 1px #c90c12;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.list-btn:hover{
+  background-color: #c90c12;
+  border: none;
+  border-bottom: solid 1px #000;
+  box-shadow: 0 2px 3px #a8a8a8;
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+}
