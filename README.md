@@ -1,6 +1,6 @@
 # techBuddy
 
-Hey, welcome to techBuddy, your gadget recommendation webiste. 
+Hey, welcome to techBuddy, your gadget recommendation website. 
 
 One stop solution to your gadget selection problems.
 
